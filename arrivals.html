@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>New Arrivals - MOSN Marketplace</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&family=Roboto:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-text">
+               Welcome to MOSN Marketplace
+            </div>
+            <div class="top-bar-links">
+                <a href="help-center.html">Help Center</a>
+                <a href="policies.html">Policies</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="main-header">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>MOSN<span>Marketplace</span></h1>
+                </div>
+                <div class="search-bar">
+                    <select aria-label="Select category">
+                        <option>All Categories</option>
+                        <option>Electronics</option>
+                        <option>Fashion</option>
+                        <option>Agriculture</option>
+                        <option>Home & Living</option>
+                        <option>Wholesale</option>
+                        <option>New Arrivals</option>
+                    </select>
+                    <input type="text" placeholder="Search new arrivals..." />
+                    <button aria-label="Search"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="header-actions">
+                    <a href="account.html"><i class="fas fa-user"></i> Account</a>
+                    <a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart (0)</a>
+                    <a href="become-a-seller.html" class="btn btn-outline">Become a Seller</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav>
+            <div class="nav-container">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="electronics.html">Electronics</a></li>
+                    <li><a href="fashion.html">Fashion</a></li>
+                    <li><a href="agriculture.html">Agriculture</a></li>
+                    <li><a href="home-living.html">Home & Living</a></li>
+                    <li><a href="wholesale.html">Wholesale</a></li>
+                    <li class="active"><a href="arrivals.html">New Arrivals</a></li>
+                </ul>
+                <a href="#" class="btn btn-primary">Filter</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+        <div class="breadcrumb-nav">
+            <a href="index.html">Home</a>
+            <i class="fas fa-chevron-right"></i>
+            <a href="shop.html">Shop</a>
+            <i class="fas fa-chevron-right"></i>
+            <span>New Arrivals</span>
+        </div>
+    </nav>
+
+    <!-- Category Hero -->
+    <section class="category-hero">
+        <div class="container">
+            <h2>New Arrivals</h2>
+            <p>Discover the latest products added to MOSN Marketplace from trusted sellers across Uganda. Stay ahead with fresh finds and trending items.</p>
+        </div>
+    </section>
+
+    <!-- Filters Section -->
+    <section class="filters-section">
+        <div class="filters-container">
+            <div class="filter-group">
+                <label for="price-range">Price Range:</label>
+                <select id="price-range">
+                    <option>All Prices</option>
+                    <option>UGX 0 - 50,000</option>
+                    <option>UGX 50,000 - 200,000</option>
+                    <option>UGX 200,000 - 500,000</option>
+                    <option>UGX 500,000+</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="category">Category:</label>
+                <select id="category">
+                    <option>All Categories</option>
+                    <option>Electronics</option>
+                    <option>Fashion</option>
+                    <option>Agriculture</option>
+                    <option>Home & Living</option>
+                    <option>Wholesale</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="condition">Condition:</label>
+                <select id="condition">
+                    <option>All</option>
+                    <option>New</option>
+                    <option>Used</option>
+                    <option>Refurbished</option>
+                </select>
+            </div>
+            <div class="sort-options">
+                <button class="sort-btn active" data-sort="default">Default</button>
+                <button class="sort-btn" data-sort="price-low">Price: Low to High</button>
+                <button class="sort-btn" data-sort="price-high">Price: High to Low</button>
+                <button class="sort-btn" data-sort="rating">Best Rated</button>
+                <button class="sort-btn" data-sort="new">Newest</button>
+            </div>
+        </div>
+    </section>
+
+  <!-- Top New Arrivals Section -->
+  <section class="products-section top-sellers-section">
+    <div class="products-container">
+      <div class="section-title">
+        <h2>Top New Arrivals</h2>
+        <p>Discover the latest and hottest products from our sellers</p>
+      </div>
+      <div class="top-sellers-grid">
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Smartphone XYZ Model 2025" />
+            <span class="product-badge">New</span>
+          </div>
+          <div class="product-info">
+            <h4>Smartphone XYZ Model 2025</h4>
+            <div class="product-price">UGX 1,500,000</div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Trendy Summer T-Shirt" />
+            <span class="product-badge">Hot</span>
+          </div>
+          <div class="product-info">
+            <h4>Trendy Summer T-Shirt</h4>
+            <div class="product-price">UGX 60,000</div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Organic Fertilizer Pack" />
+            <span class="product-badge">New</span>
+          </div>
+          <div class="product-info">
+            <h4>Organic Fertilizer Pack</h4>
+            <div class="product-price">UGX 80,000</div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Contemporary Lounge Chair" />
+            <span class="product-badge">Best</span>
+          </div>
+          <div class="product-info">
+            <h4>Contemporary Lounge Chair</h4>
+            <div class="product-price">UGX 700,000</div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="UltraBook Laptop 14" />
+            <span class="product-badge">New</span>
+          </div>
+          <div class="product-info">
+            <h4>UltraBook Laptop 14"</h4>
+            <div class="product-price">UGX 2,200,000</div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Designer Denim Jacket" />
+            <span class="product-badge">Hot</span>
+          </div>
+          <div class="product-info">
+            <h4>Designer Denim Jacket</h4>
+            <div class="product-price">UGX 150,000</div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Wireless Headphones" />
+            <span class="product-badge">-25%</span>
+          </div>
+          <div class="product-info">
+            <h4>Wireless Headphones Pro</h4>
+            <div class="product-price">UGX 180,000 <span style="text-decoration: line-through; color: var(--gray); font-size: 14px;">UGX 240,000</span></div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Smart Watch" />
+            <span class="product-badge">New</span>
+          </div>
+          <div class="product-info">
+            <h4>Smart Watch Series X</h4>
+            <div class="product-price">UGX 350,000</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>MOSN Marketplace</h3>
+                <p>Uganda's Alibaba-style Multi-Vendor Marketplace connecting buyers and sellers across the country.</p>
+                <div class="footer-social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i><span class="visually-hidden">Facebook</span></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i><span class="visually-hidden">Twitter</span></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i><span class="visually-hidden">Instagram</span></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i><span class="visually-hidden">LinkedIn</span></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Safe & Policy</h3>
+                <ul>
+                    <li><a href="policies.html">Safe Shopping</a></li>
+                    <li><a href="policies.html">Policies</a></li>
+                    <li><a href="#">Report Abuse</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Seller Services</h3>
+                <ul>
+                    <li><a href="become-a-seller.html">Become a Seller</a></li>
+                    <li><a href="#">Verified Sellers</a></li>
+                    <li><a href="#">Membership</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="help-center.html">Help Center</a></li>
+                    <li><a href="#">After-sales</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">News</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="app-links">
+            <a href="#" class="app-link">
+                <i class="fab fa-google-play app-icon"></i>
+                <span>Google Play</span>
+            </a>
+            <a href="#" class="app-link">
+                <i class="fab fa-apple app-icon"></i>
+                <span>App Store</span>
+            </a>
+        </div>
+        <div class="payment-methods">
+            <i class="fab fa-cc-visa payment-icon" title="Visa"></i>
+            <i class="fab fa-cc-mastercard payment-icon" title="Mastercard"></i>
+            <i class="fab fa-cc-paypal payment-icon" title="PayPal"></i>
+            <i class="fab fa-cc-amex payment-icon" title="American Express"></i>
+            <i class="fas fa-mobile-alt payment-icon" title="Mobile Money"></i>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 MOSN Marketplace. All rights reserved. | Uganda's Leading Marketplace</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,356 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shop - MOSN Marketplace</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <style>
+    /* Additional UI improvements for shop page */
+    .filter-bar {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .filter-bar label {
+      font-weight: 600;
+      margin-right: 8px;
+    }
+    .filter-bar select {
+      padding: 8px 12px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background-color: white;
+      cursor: pointer;
+      transition: border-color 0.3s ease;
+    }
+    .filter-bar select:hover {
+      border-color: var(--primary);
+    }
+    .product-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+    .product-card:hover {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+      z-index: 10;
+    }
+    .btn-add-cart {
+      transition: transform 0.3s ease;
+    }
+    .btn-add-cart:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 20px rgba(10, 61, 98, 0.5);
+    }
+    .footer-social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      background-color: #334155;
+      border-radius: 50%;
+      color: white;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .footer-social-link:hover {
+      background-color: #1e293b;
+      color: #fbbf24;
+    }
+    .all-products-title {
+      margin: 30px 0 20px;
+    }
+    .visually-hidden {
+      position: absolute;
+      left: -9999px;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+      padding: 0;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>  
+    <div class="top-bar">
+      <div class="container top-bar-links">
+        <span>Welcome to MOSN Marketplace</span>
+        <div>
+        <label for="category-select" class="visually-hidden">Product Category</label>
+          <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="main-header container header-content">
+      <div class="logo">
+        <h1>MOSN <span>Marketplace</span></h1>
+      </div>
+      <div class="search-bar">
+        <label for="category-select" style="position: absolute; left: -9999px;">Product Category</label>
+        <select id="category-select" aria-label="Product Category">
+          <option value="all">All Categories</option>
+          <option value="fashion">Fashion</option>
+          <option value="electronics">Electronics</option>
+          <option value="agriculture">Agriculture</option>
+          <option value="home-living">Home & Living</option>
+          <option value="wholesale">Wholesale</option>
+        </select>
+        <input type="text" placeholder="Search products..." />
+        <button>Search</button>
+      </div>
+      <div class="header-actions">
+        <a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a>
+        <a href="account.html"><i class="fas fa-user"></i> Account</a>
+      </div>
+    </div>
+    <nav>
+      <div class="nav-container">
+        <ul class="nav-links">
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="fashion.html">Fashion</a></li>
+          <li><a href="electronics.html">Electronics</a></li>
+          <li><a href="agriculture.html">Agriculture</a></li>
+          <li><a href="home-living.html">Home & Living</a></li>
+          <li><a href="wholesale.html">Wholesale</a></li>
+        </ul>
+        <button class="hamburger" aria-label="Toggle mobile menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+      <div class="mobile-menu-content">
+        <button class="close-mobile-menu" aria-label="Close mobile menu">&times;</button>
+        <ul class="mobile-nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li class="active"><a href="shop.html">Shop</a></li>
+          <li><a href="fashion.html">Fashion</a></li>
+          <li><a href="electronics.html">Electronics</a></li>
+          <li><a href="agriculture.html">Agriculture</a></li>
+          <li><a href="home-living.html">Home & Living</a></li>
+          <li><a href="wholesale.html">Wholesale</a></li>
+        </ul>
+      </div>
+    </div>
+    <h2 class="all-products-title">All Products</h2>
+
+  <!-- Top Selling Items Section -->
+  <section class="products-section top-sellers-section">
+    <div class="products-container">
+      <div class="section-title">
+        <h2>Top Selling Items</h2>
+        <p>Discover our top-selling products from verified sellers</p>
+      </div>
+      <div class="top-sellers-grid">
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Traditional African Print Dress" />
+            <span class="product-badge">New</span>
+          </div>
+          <div class="product-info">
+            <h4>Traditional African Print Dress</h4>
+            <div class="product-price">UGX 85,000</div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Leather Formal Shoes" />
+            <span class="product-badge">Hot</span>
+          </div>
+          <div class="product-info">
+            <h4>Leather Formal Shoes - Men's</h4>
+            <div class="product-price">UGX 120,000</div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1510557880182-3a935d3a6a4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Smartphone" />
+            <span class="product-badge">-20%</span>
+          </div>
+          <div class="product-info">
+            <h4>Smartphone - Latest Model</h4>
+            <div class="product-price">UGX 950,000 <span style="text-decoration: line-through; color: var(--gray); font-size: 14px;">UGX 1,200,000</span></div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Modern Sofa Set" />
+            <span class="product-badge">Best</span>
+          </div>
+          <div class="product-info">
+            <h4>Modern Sofa Set - 3 Seater</h4>
+            <div class="product-price">UGX 1,200,000</div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Organic Coffee Beans" />
+            <span class="product-badge">New</span>
+          </div>
+          <div class="product-info">
+            <h4>Organic Coffee Beans - 1kg</h4>
+            <div class="product-price">UGX 45,000</div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Gaming Laptop" />
+            <span class="product-badge">Hot</span>
+          </div>
+          <div class="product-info">
+            <h4>Gaming Laptop</h4>
+            <div class="product-price">UGX 2,500,000</div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Kitchen Mixer" />
+            <span class="product-badge">Best</span>
+          </div>
+          <div class="product-info">
+            <h4>Kitchen Mixer</h4>
+            <div class="product-price">UGX 180,000</div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Luxury Watch" />
+            <span class="product-badge">-15%</span>
+          </div>
+          <div class="product-info">
+            <h4>Luxury Watch</h4>
+            <div class="product-price">UGX 350,000 <span style="text-decoration: line-through; color: var(--gray); font-size: 14px;">UGX 400,000</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>MOSN Marketplace</h3>
+        <p>Uganda's Alibaba-style Multi-Vendor Marketplace connecting buyers and sellers across the country.</p>
+        <div style="display: flex; gap: 15px; margin-top: 20px;">
+          <a href="#" class="footer-social-link" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="footer-social-link" title="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="footer-social-link" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="footer-social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Safe & Policy</h3>
+        <ul>
+          <li><a href="policies.html">Safe Shopping</a></li>
+          <li><a href="policies.html">Policies</a></li>
+          <li><a href="#">Report Abuse</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Seller Services</h3>
+        <ul>
+          <li><a href="become-a-seller.html">Become a Seller</a></li>
+          <li><a href="#">Verified Sellers</a></li>
+          <li><a href="#">Membership</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="help-center.html">Help Center</a></li>
+          <li><a href="#">After-sales</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">News</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="app-links">
+      <a href="#" class="app-link">
+        <i class="fab fa-google-play app-icon"></i>
+        <span>Google Play</span>
+      </a>
+      <a href="#" class="app-link">
+        <i class="fab fa-apple app-icon"></i>
+        <span>App Store</span>
+      </a>
+    </div>
+    <div class="payment-methods">
+      <i class="fab fa-cc-visa payment-icon" title="Visa"></i>
+      <i class="fab fa-cc-mastercard payment-icon" title="Mastercard"></i>
+      <i class="fab fa-cc-paypal payment-icon" title="PayPal"></i>
+      <i class="fab fa-cc-amex payment-icon" title="American Express"></i>
+      <i class="fas fa-mobile-alt payment-icon" title="Mobile Money"></i>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 MOSN Marketplace. All rights reserved. | Uganda's Leading Marketplace</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Search functionality
+      const searchButton = document.querySelector('.search-bar button');
+      searchButton.addEventListener('click', function() {
+        const searchInput = document.querySelector('.search-bar input');
+        const searchTerm = searchInput.value;
+        if (searchTerm.trim() !== '') {
+          alert(`Searching products for: ${searchTerm}`);
+        }
+      });
+
+      // Add to cart functionality
+      const addToCartBtns = document.querySelectorAll('.add-to-cart');
+      addToCartBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          const productName = this.closest('.product-card').querySelector('h4').textContent;
+          alert(`${productName} added to cart!`);
+        });
+      });
+
+      // Pagination
+      const pageBtns = document.querySelectorAll('.page-btn');
+      pageBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          if (this.textContent === 'Previous' || this.textContent === 'Next') {
+            alert(`Navigating to ${this.textContent} page`);
+          } else {
+            pageBtns.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            alert(`Viewing page ${this.textContent}`);
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,415 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home & Living - MOSN Marketplace</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&family=Roboto:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-text">
+               Welcome to MOSN Marketplace
+            </div>
+            <div class="top-bar-links">
+                <a href="help-center.html">Help Center</a>
+                <a href="policies.html">Policies</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="main-header">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>MOSN<span>Marketplace</span></h1>
+                </div>
+                <div class="search-bar">
+                    <select aria-label="Select category">
+                        <option>Home & Living</option>
+                        <option>Furniture</option>
+                        <option>Kitchen</option>
+                        <option>Bedding</option>
+                        <option>Decor</option>
+                    </select>
+                    <input type="text" placeholder="Search home & living...">
+                    <button aria-label="Search"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="header-actions">
+                    <a href="account.html"><i class="fas fa-user"></i> Account</a>
+                    <a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart (0)</a>
+                    <a href="become-a-seller.html" class="btn btn-outline">Become a Seller</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav>
+            <div class="nav-container">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="electronics.html">Electronics</a></li>
+                    <li><a href="fashion.html">Fashion</a></li>
+                    <li><a href="agriculture.html">Agriculture</a></li>
+                    <li class="active"><a href="home-living.html">Home & Living</a></li>
+                    <li><a href="wholesale.html">Wholesale</a></li>
+                    <li><a href="arrivals.html">New Arrivals</a></li>
+                </ul>
+                <a href="#" class="btn btn-primary">Filter</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+        <div class="breadcrumb-nav">
+            <a href="index.html">Home</a>
+            <i class="fas fa-chevron-right"></i>
+            <a href="shop.html">Shop</a>
+            <i class="fas fa-chevron-right"></i>
+            <span>Home & Living</span>
+        </div>
+    </nav>
+
+    <!-- Category Hero -->
+    <section class="category-hero">
+        <div class="container">
+            <h2>Home & Living</h2>
+            <p>Transform your living space with stylish furniture, kitchen essentials, bedding, and home decor from local Ugandan artisans and sellers. Create the perfect home environment.</p>
+        </div>
+    </section>
+
+    <!-- Filters Section -->
+    <section class="filters-section">
+        <div class="filters-container">
+            <div class="filter-group">
+                <label for="price-range">Price Range:</label>
+                <select id="price-range">
+                    <option>All Prices</option>
+                    <option>UGX 0 - 50,000</option>
+                    <option>UGX 50,000 - 200,000</option>
+                    <option>UGX 200,000 - 500,000</option>
+                    <option>UGX 500,000+</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="brand">Brand:</label>
+                <select id="brand">
+                    <option>All Brands</option>
+                    <option>Local Crafts</option>
+                    <option>IKEA Style</option>
+                    <option>Modern Home</option>
+                    <option>Traditional</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="condition">Condition:</label>
+                <select id="condition">
+                    <option>All</option>
+                    <option>New</option>
+                    <option>Used</option>
+                    <option>Refurbished</option>
+                </select>
+            </div>
+            <div class="sort-options">
+                <button class="sort-btn active" data-sort="default">Default</button>
+                <button class="sort-btn" data-sort="price-low">Price: Low to High</button>
+                <button class="sort-btn" data-sort="price-high">Price: High to Low</button>
+                <button class="sort-btn" data-sort="rating">Best Rated</button>
+                <button class="sort-btn" data-sort="new">Newest</button>
+            </div>
+        </div>
+    </section>
+
+  <!-- Top Home & Living Section -->
+  <section class="products-section top-sellers-section">
+    <div class="products-container">
+      <div class="section-title">
+        <h2>Top Home & Living</h2>
+        <p>Discover the best furniture, decor, and home essentials from trusted local sellers</p>
+      </div>
+      <div class="top-sellers-grid">
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Modern Leather Sofa Set - 3 Seater" />
+            <span class="product-badge">New</span>
+          </div>
+          <div class="product-info">
+            <h4>Modern Leather Sofa Set - 3 Seater</h4>
+            <div class="product-price">UGX 1,200,000</div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1582582494707-0a3a7a7a7a7a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Queen Size Orthopedic Mattress" />
+            <span class="product-badge">Hot</span>
+          </div>
+          <div class="product-info">
+            <h4>Queen Size Orthopedic Mattress</h4>
+            <div class="product-price">UGX 450,000</div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1503602642458-232111445657?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Complete Kitchen Utensil Set - 20 Pieces" />
+            <span class="product-badge">-15%</span>
+          </div>
+          <div class="product-info">
+            <h4>Complete Kitchen Utensil Set - 20 Pieces</h4>
+            <div class="product-price">UGX 120,000 <span style="text-decoration: line-through; color: var(--gray); font-size: 14px;">UGX 140,000</span></div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1493666438817-866a91353ca9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Wooden Dining Table - 6 Seater" />
+            <span class="product-badge">Best</span>
+          </div>
+          <div class="product-info">
+            <h4>Wooden Dining Table - 6 Seater</h4>
+            <div class="product-price">UGX 850,000</div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="LED Ceiling Light Fixture - Modern Design" />
+            <span class="product-badge">New</span>
+          </div>
+          <div class="product-info">
+            <h4>LED Ceiling Light Fixture - Modern Design</h4>
+            <div class="product-price">UGX 75,000</div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Wall Art Canvas Set - African Themes" />
+            <span class="product-badge">Hot</span>
+          </div>
+          <div class="product-info">
+            <h4>Wall Art Canvas Set - African Themes</h4>
+            <div class="product-price">UGX 180,000</div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Ceramic Dinnerware Set" />
+            <span class="product-badge">Best</span>
+          </div>
+          <div class="product-info">
+            <h4>Ceramic Dinnerware Set - 24 Pieces</h4>
+            <div class="product-price">UGX 220,000</div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Floor Rug - Traditional Design" />
+            <span class="product-badge">-25%</span>
+          </div>
+          <div class="product-info">
+            <h4>Floor Rug - Traditional Design</h4>
+            <div class="product-price">UGX 150,000 <span style="text-decoration: line-through; color: var(--gray); font-size: 14px;">UGX 200,000</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>MOSN Marketplace</h3>
+          <p>Uganda's Alibaba-style Multi-Vendor Marketplace connecting buyers and sellers across the country.</p>
+          <div style="display: flex; gap: 15px; margin-top: 20px;">
+            <a href="#" style="display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; background-color: #334155; border-radius: 50%; color: white; text-decoration: none;"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" style="display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; background-color: #334155; border-radius: 50%; color: white; text-decoration: none;"><i class="fab fa-twitter"></i></a>
+            <a href="#" style="display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; background-color: #334155; border-radius: 50%; color: white; text-decoration: none;"><i class="fab fa-instagram"></i></a>
+            <a href="#" style="display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; background-color: #334155; border-radius: 50%; color: white; text-decoration: none;"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>Safe & Policy</h3>
+          <ul>
+            <li><a href="policies.html">Safe Shopping</a></li>
+            <li><a href="policies.html">Policies</a></li>
+            <li><a href="#">Report Abuse</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Seller Services</h3>
+          <ul>
+            <li><a href="become-a-seller.html">Become a Seller</a></li>
+            <li><a href="#">Verified Sellers</a></li>
+            <li><a href="#">Membership</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="help-center.html">Help Center</a></li>
+            <li><a href="#">After-sales</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">News</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="app-links">
+        <a href="#" class="app-link">
+          <i class="fab fa-google-play app-icon"></i>
+          <span>Google Play</span>
+        </a>
+        <a href="#" class="app-link">
+          <i class="fab fa-apple app-icon"></i>
+          <span>App Store</span>
+        </a>
+      </div>
+      <div class="payment-methods">
+        <i class="fab fa-cc-visa payment-icon" title="Visa"></i>
+        <i class="fab fa-cc-mastercard payment-icon" title="Mastercard"></i>
+        <i class="fab fa-cc-paypal payment-icon" title="PayPal"></i>
+        <i class="fab fa-cc-amex payment-icon" title="American Express"></i>
+        <i class="fas fa-mobile-alt payment-icon" title="Mobile Money"></i>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 MOSN Marketplace. All rights reserved. | Uganda's Leading Marketplace</p>
+      </div>
+    </footer>
+
+    <script>
+        // Home & Living Page JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            // Search functionality
+            const searchButton = document.querySelector('.search-bar button');
+            searchButton.addEventListener('click', function() {
+                const searchInput = document.querySelector('.search-bar input');
+                const searchTerm = searchInput.value;
+                if (searchTerm.trim() !== '') {
+                    alert(`Searching home & living for: ${searchTerm}`);
+                }
+            });
+
+            // Filter and sort functionality
+            const sortBtns = document.querySelectorAll('.sort-btn');
+            sortBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    sortBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    const sortType = this.dataset.sort;
+                    alert(`Sorting by: ${sortType}`);
+                    // Here you would implement actual sorting logic
+                });
+            });
+
+            // Add to cart functionality
+            const addToCartBtns = document.querySelectorAll('.add-to-cart');
+            addToCartBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const productName = this.closest('.product-card').querySelector('h4').textContent;
+                    alert(`${productName} added to cart!`);
+                });
+            });
+
+            // Pagination
+            const pageBtns = document.querySelectorAll('.page-btn');
+            pageBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    if (this.textContent === 'Previous' || this.textContent === 'Next') {
+                        alert(`Navigating to ${this.textContent} page`);
+                    } else {
+                        pageBtns.forEach(b => b.classList.remove('active'));
+                        this.classList.add('active');
+                        alert(`Viewing page ${this.textContent}`);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

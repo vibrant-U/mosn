@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in to MOSN Marketplace</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&family=Roboto:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-text">
+                Uganda's Alibaba-style Multi-Vendor Marketplace
+            </div>
+            <div class="top-bar-links">
+                <a href="help-center.html">Help Center</a>
+                <a href="policies.html">Policies</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="main-header">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>MOSN<span>Marketplace</span></h1>
+                </div>
+                <div class="search-bar">
+                    <select aria-label="Select category">
+                        <option>All Categories</option>
+                        <option>Electronics</option>
+                        <option>Fashion</option>
+                        <option>Agriculture</option>
+                        <option>Home & Living</option>
+                        <option>Wholesale</option>
+                    </select>
+                    <input type="text" placeholder="Search products...">
+                    <button aria-label="Search"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Login Section -->
+    <section class="login-wrapper">
+        <div class="promo-panel">
+            <img src="https://cdn.prod.website-files.com/6232d983fb6808367ba19d67/6523d1655c1a2b5a1ef544d4_courier-with-parcel-trolley-against-logistic-truck-2021-08-26-16-25-49-utc.jpg" alt="Logistics and Marketplace">
+            <h2>Discover Uganda's Marketplace</h2>
+            <p>Secure transactions and great deals from local vendors</p>
+        </div>
+        <div class="form-panel">
+            <h2>Sign in to MOSN Marketplace</h2>
+            <p>Enter your email to continue</p>
+            <form id="loginForm">
+                <input type="email" class="email-input" id="email" placeholder="Enter email address" required>
+                <button type="submit" class="continue-btn">Continue</button>
+            </form>
+            <div class="login-divider">
+                <span>or</span>
+            </div>
+            <button type="button" class="social-btn" id="google-btn"><i class="fab fa-google"></i> Continue with Google</button>
+            <button type="button" class="social-btn" id="facebook-btn"><i class="fab fa-facebook-f"></i> Continue with Facebook</button>
+            <button type="button" class="social-btn" id="linkedin-btn"><i class="fab fa-linkedin-in"></i> Continue with LinkedIn</button>
+            <p class="signup-link">Don't have an account? <a href="register.html">Sign up here</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>MOSN Marketplace</h3>
+                <p>Uganda's Alibaba-style Multi-Vendor Marketplace connecting buyers and sellers across the country.</p>
+                <div class="footer-social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i><span class="visually-hidden">Facebook</span></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i><span class="visually-hidden">Twitter</span></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i><span class="visually-hidden">Instagram</span></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i><span class="visually-hidden">LinkedIn</span></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="electronics.html">Electronics</a></li>
+                    <li><a href="fashion.html">Fashion</a></li>
+                    <li><a href="agriculture.html">Agriculture</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li><a href="help-center.html">Help Center</a></li>
+                    <li><a href="policies.html">Policies</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> Kampala, Uganda</li>
+                    <li><i class="fas fa-phone"></i> +256 700 123 456</li>
+                    <li><i class="fas fa-envelope"></i> info@mosnmarketplace.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 MOSN Marketplace. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Login JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginForm = document.getElementById('loginForm');
+            loginForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = document.getElementById('email').value;
+                if (email && /\S+@\S+\.\S+/.test(email)) {
+                    alert('Proceeding to enter password...');
+                    // In real app, proceed to password step or backend
+                } else {
+                    alert('Please enter a valid email address.');
+                }
+            });
+
+            // Social login buttons
+            document.getElementById('google-btn').addEventListener('click', function() {
+                alert('Logging in with Google');
+            });
+            document.getElementById('facebook-btn').addEventListener('click', function() {
+                alert('Logging in with Facebook');
+            });
+            document.getElementById('linkedin-btn').addEventListener('click', function() {
+                alert('Logging in with LinkedIn');
+            });
+        });
+    </script>
+</body>
+</html>

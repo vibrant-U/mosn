@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Become a Seller - MOSN Marketplace</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&family=Roboto:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Open Sans", "Roboto", sans-serif;
+    }
+
+    :root {
+      --primary: #0a3d62;
+      --secondary: #e67e22;
+      --accent: #27ae60;
+      --neutral: #f4f6f9;
+      --dark: #1e293b;
+      --light: #f8fafc;
+      --gray: #64748b;
+      --border: #e2e8f0;
+    }
+
+    body {
+      background-color: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header Styles */
+    header {
+      background-color: white;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .top-bar {
+      background-color: var(--primary);
+      color: white;
+      padding: 8px 0;
+      font-size: 14px;
+    }
+
+    .top-bar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .top-bar-links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 15px;
+    }
+
+    .main-header {
+      padding: 15px 0;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo h1 {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--primary);
+      font-family: "Poppins", "Montserrat", sans-serif;
+    }
+
+    .logo span {
+      color: var(--secondary);
+    }
+
+    .search-bar {
+      display: flex;
+      width: 50%;
+      max-width: 500px;
+    }
+
+    .search-bar select {
+      padding: 12px 15px;
+      border: 1px solid var(--border);
+      border-right: none;
+      border-radius: 4px 0 0 4px;
+      background-color: white;
+      color: var(--gray);
+      outline: none;
+    }
+
+    .search-bar input {
+      flex: 1;
+      padding: 12px 15px;
+      border: 1px solid var(--border);
+      border-right: none;
+      outline: none;
+    }
+
+    .search-bar button {
+      padding: 12px 20px;
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .header-actions a {
+      color: var(--dark);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background-color: var(--primary);
+      color: white;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background-color: #083050;
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      color: var(--primary);
+      border: 1px solid var(--primary);
+    }
+
+    .btn-outline:hover {
+      background-color: var(--primary);
+      color: white;
+    }
+
+    /* Navigation */
+    nav {
+      background-color: white;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+    }
+
+    .nav-links li {
+      padding: 15px 20px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .nav-links li.active a {
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    /* Breadcrumb */
+    .breadcrumb {
+      background-color: white;
+      padding: 15px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .breadcrumb-nav {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      color: var(--gray);
+      font-size: 14px;
+    }
+
+    .breadcrumb-nav a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    /* Registration Section */
+    .registration-section {
+      padding: 60px 0;
+      background-color: var(--neutral);
+    }
+
+    .registration-container {
+      max-width: 600px;
+      margin: 0 auto;
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .registration-title {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .registration-title h2 {
+      font-size: 32px;
+      color: var(--dark);
+      margin-bottom: 10px;
+      font-family: "Poppins", sans-serif;
+    }
+
+    .registration-title p {
+      color: var(--gray);
+    }
+
+    .registration-form {
+      display: grid;
+      gap: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group label {
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: var(--dark);
+    }
+
+    .form-group input,
+    .form-group select {
+      padding: 12px 15px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-size: 16px;
+      outline: none;
+      transition: border-color 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+      border-color: var(--primary);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .checkbox-group {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .checkbox-group input[type="checkbox"] {
+      margin-top: 3px;
+      width: 16px;
+      height: 16px;
+    }
+
+    .checkbox-group label {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .register-btn {
+      width: 100%;
+      padding: 15px;
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    .register-btn:hover {
+      background-color: #083050;
+    }
+
+    .login-link {
+      text-align: center;
+      margin-top: 20px;
+      color: var(--gray);
+    }
+
+    .login-link a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .login-link a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--dark);
+      color: white;
+      padding: 60px 0 20px;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-section h3 {
+      font-size: 18px;
+      margin-bottom: 20px;
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+    .footer-section h3::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 40px;
+      height: 2px;
+      background-color: var(--primary);
+    }
+
+    .footer-section ul {
+      list-style: none;
+    }
+
+    .footer-section li {
+      margin-bottom: 10px;
+    }
+
+    .footer-section a {
+      color: #cbd5e1;
+      text-decoration: none;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid #334155;
+      color: #94a3b8;
+      font-size: 14px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .header-content {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .search-bar {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .nav-container {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .registration-container {
+        padding: 30px 20px;
+      }
+
+      .registration-title h2 {
+        font-size: 28px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .top-bar .container {
+        flex-direction: column;
+        gap: 5px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-text">
+        Uganda's Alibaba-style Multi-Vendor Marketplace
+      </div>
+      <div class="top-bar-links">
+        <a href="help-center.html">Help Center</a>
+        <a href="policies.html">Policies</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="main-header">
+      <div class="container">
+        <div class="header-content">
+          <div class="logo">
+            <h1>MOSN<span>Marketplace</span></h1>
+          </div>
+          <div class="search-bar">
+            <select>
+              <option>All Categories</option>
+              <option>Electronics</option>
+              <option>Fashion</option>
+              <option>Agriculture</option>
+              <option>Home & Living</option>
+              <option>Wholesale</option>
+            </select>
+            <input type="text" placeholder="Search products..." />
+            <button><i class="fas fa-search"></i></button>
+          </div>
+          <div class="header-actions">
+            <a href="#"><i class="fas fa-user"></i> Account</a>
+            <a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart (3)</a>
+            <a href="become-a-seller.html" class="btn btn-outline">Become a Seller</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+      <div class="container">
+        <div class="nav-container">
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="electronics.html">Electronics</a></li>
+            <li><a href="fashion.html">Fashion</a></li>
+            <li><a href="agriculture.html">Agriculture</a></li>
+            <li><a href="home-living.html">Home & Living</a></li>
+            <li><a href="wholesale.html">Wholesale</a></li>
+          </ul>
+          <a href="#" class="btn btn-primary">Filter</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb">
+    <div class="container">
+      <div class="breadcrumb-nav">
+        <a href="index.html">Home</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Become a Seller</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Registration Section -->
+  <section class="registration-section">
+    <div class="container">
+      <div class="registration-container">
+        <div class="registration-title">
+          <h2>Join MOSN Marketplace</h2>
+          <p>Start selling your products to millions of customers across Uganda</p>
+        </div>
+
+        <form class="registration-form" id="seller-registration-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="first-name">First Name</label>
+              <input type="text" id="first-name" name="first-name" required />
+            </div>
+            <div class="form-group">
+              <label for="last-name">Last Name</label>
+              <input type="text" id="last-name" name="last-name" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="+256 7XX XXX XXX" required />
+          </div>
+
+          <div class="form-group">
+            <label for="business-name">Business Name</label>
+            <input type="text" id="business-name" name="business-name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="business-category">Business Category</label>
+            <select id="business-category" name="business-category" required>
+              <option value="">Select Category</option>
+              <option value="electronics">Electronics</option>
+              <option value="fashion">Fashion & Clothing</option>
+              <option value="agriculture">Agriculture & Farming</option>
+              <option value="home-living">Home & Living</option>
+              <option value="wholesale">Wholesale</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" required />
+            </div>
+            <div class="form-group">
+              <label for="confirm-password">Confirm Password</label>
+              <input type="password" id="confirm-password" name="confirm-password" required />
+            </div>
+          </div>
+
+          <div class="checkbox-group">
+            <input type="checkbox" id="terms" name="terms" required />
+            <label for="terms">
+              I agree to the <a href="policies.html" target="_blank">Terms of Service</a> and <a href="policies.html" target="_blank">Privacy Policy</a>
+            </label>
+          </div>
+
+          <button type="submit" class="register-btn">Create Seller Account</button>
+        </form>
+
+        <div class="login-link">
+          Already have an account? <a href="#">Sign In</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>MOSN Marketplace</h3>
+          <p>
+            Uganda's Alibaba-style Multi-Vendor Marketplace connecting buyers
+            and sellers across the country.
+          </p>
+          <div style="display: flex; gap: 15px; margin-top: 20px;">
+            <a href="#" style="display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; background-color: #334155; border-radius: 50%; color: white; text-decoration: none;">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" style="display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; background-color: #334155; border-radius: 50%; color: white; text-decoration: none;">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" style="display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; background-color: #334155; border-radius: 50%; color: white; text-decoration: none;">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" style="display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; background-color: #334155; border-radius: 50%; color: white; text-decoration: none;">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="electronics.html">Electronics</a></li>
+            <li><a href="fashion.html">Fashion</a></li>
+            <li><a href="agriculture.html">Agriculture</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Customer Service</h3>
+          <ul>
+            <li><a href="help-center.html">Help Center</a></li>
+            <li><a href="policies.html">Policies</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact Info</h3>
+          <ul>
+            <li><i class="fas fa-map-marker-alt"></i> Kampala, Uganda</li>
+            <li><i class="fas fa-phone"></i> +256 700 123 456</li>
+            <li><i class="fas fa-envelope"></i> info@mosnmarketplace.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 MOSN Marketplace. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.getElementById("seller-registration-form");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        // Basic validation
+        const password = document.getElementById("password").value;
+        const confirmPassword = document.getElementById("confirm-password").value;
+
+        if (password !== confirmPassword) {
+          alert("Passwords do not match!");
+          return;
+        }
+
+        // In a real application, you would send this data to your backend
+        alert("Registration successful! Your seller account is being reviewed.");
+        
+        // Reset form
+        form.reset();
+      });
+    });
+  </script>
+</body>
+</html>

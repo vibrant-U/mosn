@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account - MOSN Marketplace</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&family=Roboto:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-text">
+                Uganda's Alibaba-style Multi-Vendor Marketplace
+            </div>
+            <div class="top-bar-links">
+                <a href="help-center.html">Help Center</a>
+                <a href="policies.html">Policies</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="main-header">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>MOSN<span>Marketplace</span></h1>
+                </div>
+                <div class="search-bar">
+                    <select aria-label="Select category">
+                        <option>All Categories</option>
+                        <option>Electronics</option>
+                        <option>Fashion</option>
+                        <option>Agriculture</option>
+                        <option>Home & Living</option>
+                        <option>Wholesale</option>
+                    </select>
+                    <input type="text" placeholder="Search products...">
+                    <button aria-label="Search"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Registration Section -->
+    <section class="login-wrapper">
+        <div class="promo-panel">
+            <img src="https://cdn.prod.website-files.com/6232d983fb6808367ba19d67/6523d1655c1a2b5a1ef544d4_courier-with-parcel-trolley-against-logistic-truck-2021-08-26-16-25-49-utc.jpg" alt="Logistics and Marketplace">
+            <h2>Join Uganda's Marketplace</h2>
+            <p>Create your account and start buying or selling today</p>
+        </div>
+        <div class="form-panel">
+            <h2>Create your account</h2>
+            <p>Join thousands of buyers and sellers on MOSN Marketplace</p>
+            <form id="registerForm">
+                <input type="text" class="email-input" id="fullName" placeholder="Full name" required>
+                <input type="email" class="email-input" id="email" placeholder="Email address" required>
+                <input type="password" class="email-input" id="password" placeholder="Create password" required>
+                <input type="password" class="email-input" id="confirmPassword" placeholder="Confirm password" required>
+                <button type="submit" class="continue-btn">Create Account</button>
+            </form>
+            <div class="login-divider">
+                <span>or</span>
+            </div>
+            <button type="button" class="social-btn" id="google-btn"><i class="fab fa-google"></i> Sign up with Google</button>
+            <button type="button" class="social-btn" id="facebook-btn"><i class="fab fa-facebook-f"></i> Sign up with Facebook</button>
+            <button type="button" class="social-btn" id="linkedin-btn"><i class="fab fa-linkedin-in"></i> Sign up with LinkedIn</button>
+            <p class="signup-link">Already have an account? <a href="login.html">Sign in here</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>MOSN Marketplace</h3>
+                <p>Uganda's Alibaba-style Multi-Vendor Marketplace connecting buyers and sellers across the country.</p>
+                <div class="footer-social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i><span class="visually-hidden">Facebook</span></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i><span class="visually-hidden">Twitter</span></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i><span class="visually-hidden">Instagram</span></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i><span class="visually-hidden">LinkedIn</span></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="electronics.html">Electronics</a></li>
+                    <li><a href="fashion.html">Fashion</a></li>
+                    <li><a href="agriculture.html">Agriculture</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li><a href="help-center.html">Help Center</a></li>
+                    <li><a href="policies.html">Policies</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> Kampala, Uganda</li>
+                    <li><i class="fas fa-phone"></i> +256 700 123 456</li>
+                    <li><i class="fas fa-envelope"></i> info@mosnmarketplace.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 MOSN Marketplace. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Registration JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            const registerForm = document.getElementById('registerForm');
+            registerForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const fullName = document.getElementById('fullName').value;
+                const email = document.getElementById('email').value;
+                const password = document.getElementById('password').value;
+                const confirmPassword = document.getElementById('confirmPassword').value;
+
+                if (!fullName.trim()) {
+                    alert('Please enter your full name.');
+                    return;
+                }
+
+                if (!email || !/\S+@\S+\.\S+/.test(email)) {
+                    alert('Please enter a valid email address.');
+                    return;
+                }
+
+                if (password.length < 6) {
+                    alert('Password must be at least 6 characters long.');
+                    return;
+                }
+
+                if (password !== confirmPassword) {
+                    alert('Passwords do not match.');
+                    return;
+                }
+
+                alert('Account created successfully! Welcome to MOSN Marketplace.');
+                // In real app, proceed to backend registration
+            });
+
+            // Social registration buttons
+            document.getElementById('google-btn').addEventListener('click', function() {
+                alert('Signing up with Google');
+            });
+            document.getElementById('facebook-btn').addEventListener('click', function() {
+                alert('Signing up with Facebook');
+            });
+            document.getElementById('linkedin-btn').addEventListener('click', function() {
+                alert('Signing up with LinkedIn');
+            });
+        });
+    </script>
+</body>
+</html>
