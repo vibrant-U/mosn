@@ -1,0 +1,43 @@
+.home-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.banner {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.deals-section {
+  background-color: #d32f2f;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.shop-now-btn {
+  margin-top: 10px;
+  background-color: white;
+  color: #d32f2f;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.product-list h3 {
+  color: #d32f2f;
+  margin-bottom: 10px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(180px,1fr));
+  gap: 15px;
+}
