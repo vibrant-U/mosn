@@ -7,3 +7,4 @@
 5. [x] Update home-living.html: Change to "Top Home & Living", add 8 home products.
 6. [x] Update wholesale.html: Change to "Top Wholesale", add 8 wholesale products.
 7. [x] Update arrivals.html: Change to "Top New Arrivals", add 8 new products.
+8. [ ] Create factory.html: Add Factory category page with 12 industrial/manufacturing products, update nav in all pages to include Factory link.
